@@ -1,4 +1,4 @@
-// Xcode settings for all Woolsoft OSX Release configurations
+// Xcode settings for all Woolsoft OSX Release (for distribution) configurations
 
 // Start with global project settings
 
@@ -13,11 +13,18 @@ ONLY_ACTIVE_ARCH = NO
 // === Build Locations ===
 // === Build Options ===
 
-DEBUG_INFORMATION_FORMAT = dwarf
+DEBUG_INFORMATION_FORMAT = dwarf-with-dsym
 VALIDATE_PRODUCT = YES
 
 // === Code Signing ===
+
+CODE_SIGN_IDENTITY = Developer ID Application
+
 // === Deployment ===
+
+STRIP_INSTALLED_PRODUCT = YES
+STRIP_STYLE = debugging
+
 // === Kernel Modules ===
 // === Linking ===
 // === Packaging ===
