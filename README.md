@@ -14,4 +14,4 @@ sections (as comments) as well as each setting (as of Xcode 6.3.2).
 Setting up to use configuration files is easy. Select your project in the Project View, then select the `Info` panel.
 It will look something like this:
 
-![config file setup](https://github.com/woolie/configurations/assets/config-files.png)
+![config file setup](https://github.com/woolie/configurations/blob/master/assets/config-files.png)
