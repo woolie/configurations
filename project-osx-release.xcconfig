@@ -1,4 +1,4 @@
-// Xcode settings for all Woolsoft OSX Debug configurations
+// Xcode settings for all Woolsoft OSX Release configurations
 
 // Start with global project settings
 
@@ -8,12 +8,13 @@
 
 // === Architectures ===
 
-ONLY_ACTIVE_ARCH = YES 		// Build only the active architecture, to make the build/debug cycle faster
+ONLY_ACTIVE_ARCH = NO
 
 // === Build Locations ===
 // === Build Options ===
 
-DEBUG_INFORMATION_FORMAT = dwarf-with-dsym
+DEBUG_INFORMATION_FORMAT = dwarf
+VALIDATE_PRODUCT = YES
 
 // == Code Signing ===
 // === Packaging ===
@@ -22,7 +23,7 @@ DEBUG_INFORMATION_FORMAT = dwarf-with-dsym
 // === Versioning ===
 // === Apple LLVM - Code Generation ===
 
-GCC_OPTIMIZATION_LEVEL = 0
+GCC_OPTIMIZATION_LEVEL = s
 GCC_SYMBOLS_PRIVATE_EXTERN = NO
 
 // === Apple LLVM - Custom Compiler Flags ===
@@ -32,8 +33,8 @@ GCC_SYMBOLS_PRIVATE_EXTERN = NO
 // === Apple LLVM - Language - Objective C ===
 // === Apple LLVM - Preprocessor ===
 
-ENABLE_NS_ASSERTIONS = YES
-GCC_PREPROCESSOR_DEFINITIONS = DEBUG=1
+ENABLE_NS_ASSERTIONS = NO
+GCC_PREPROCESSOR_DEFINITIONS = NS_BLOCK_ASSERTIONS=1 NDEBUG
 
 // === Apple LLVM - Warning Policies ===
 // === Apple LLVM - Warnings - All Languages ===
