@@ -1,0 +1,50 @@
+// Xcode settings for all Woolsoft OSX Debug configurations
+
+// Start with global project settings
+
+#include "global-osx.xcconfig"
+
+// Then add changes on top:
+
+// === Architectures ===
+
+ONLY_ACTIVE_ARCH = YES 		// Build only the active architecture, to make the build/debug cycle faster
+
+// === Build Locations ===
+// === Build Options ===
+
+DEBUG_INFORMATION_FORMAT = dwarf-with-dsym
+
+// == Code Signing ===
+// === Packaging ===
+// === Search Paths ===
+// === Testing ===
+// === Versioning ===
+// === Apple LLVM - Code Generation ===
+
+GCC_OPTIMIZATION_LEVEL = 0
+GCC_SYMBOLS_PRIVATE_EXTERN = NO
+
+// === Apple LLVM - Custom Compiler Flags ===
+// === Apple LLVM - Language ===
+// === Apple LLVM - Language - C++ ===
+// === Apple LLVM - Language - Modules ===
+// === Apple LLVM - Language - Objective C ===
+// === Apple LLVM - Preprocessor ===
+
+ENABLE_NS_ASSERTIONS = YES
+GCC_PREPROCESSOR_DEFINITIONS = DEBUG=1
+
+// === Apple LLVM - Warning Policies ===
+// === Apple LLVM - Warnings - All Languages ===
+// === Apple LLVM - Warnings - C++ ===
+// === Apple LLVM - Warnings - Objective C ===
+// === Apple LLVM - Warnings - Objective C and ARC ===
+// === Asset Catalog Compiler - Options ===
+// === Interface Builder XIB Compiler - Options ===
+// === OSACompiler - Build Options ===
+// === Static Analyzer - Analysis Policy ===
+// === Static Analyzer - Generic Issues ===
+// === Static Analyzer - Issues - Objective C ===
+// === Static Analyzer - Issues - Security ===
+// === User Defined ===

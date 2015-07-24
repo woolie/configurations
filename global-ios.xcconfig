@@ -1,0 +1,188 @@
+// Xcode settings for all Woolsoft OSX targets
+
+// === Architectures ===
+
+// Override as needed at the project or target level
+
+ARCHS = x86_64
+SDKROOT = macosx
+
+// === Build Locations ===
+// === Build Options ===
+
+GCC_VERSION = com.apple.compilers.llvm.clang.1_0
+
+// == Code Signing ===
+// == Deployment ===
+
+MACOSX_DEPLOYMENT_TARGET = 10.10
+
+// Don't strip binaries that are copied as part of the packaging process.
+// They're generally signed during build, so we shouldn't modify them afterwards.
+// (In fact the build system refuses to, so having this set to YES just causes a warning.)
+// This is not supposed to affect the final binary (app) -- that's STRIP_INSTALLED_PRODUCT.
+
+COPY_PHASE_STRIP = NO
+
+// === Kernel Modules ===
+// === Linking ===
+
+// === Search Paths ===
+
+// "For backwards compatibility reasons, this setting is enabled by default, but disabling it is strongly recommended."
+
+ALWAYS_SEARCH_USER_PATHS = NO
+
+// === Testing ===
+// === Versioning ===
+// === Apple LLVM - Code Generation ===
+
+GCC_DYNAMIC_NO_PIC = NO
+GCC_NO_COMMON_BLOCKS = YES
+
+// "Symbols Hidden By Default".  Needs to be consistent across all the projects,
+// or we might get linker warnings like:
+// 
+//    "Direct access in -[ALSAreaOfInterest(Protocol) createProtocolRegard] to global weak symbol
+//     __ZTVN3Avt6Screen14AreaOfInterestE means the weak symbol cannot be overridden at runtime.
+//     This was likely caused by different translation units being compiled with different visibility settings."
+//
+// Also see https://developer.apple.com/library/mac/#documentation/DeveloperTools/Conceptual/CppRuntimeEnv/Articles/SymbolVisibility.html
+// It doesn't seem to matter what value we choose, since we aren't using dylibs.
+
+GCC_SYMBOLS_PRIVATE_EXTERN = YES
+
+// === Apple LLVM - Custom Compiler Flags ===
+// === Apple LLVM - Language ===
+
+GCC_C_LANGUAGE_STANDARD = gnu99
+
+// === Apple LLVM - Language - C++ ===
+
+CLANG_CXX_LANGUAGE_STANDARD = c++14
+
+// === Apple LLVM - Language - Modules ===
+
+CLANG_ENABLE_MODULES = YES
+CLANG_MODULES_AUTOLINK = YES
+
+// === Apple LLVM - Language - Objective C ===
+
+GCC_ENABLE_OBJC_EXCEPTIONS = YES
+
+// === Apple LLVM - Language - Objective C ===
+
+CLANG_ENABLE_OBJC_ARC = YES
+
+// === Apple LLVM - Preprocessor ===
+
+ENABLE_STRICT_OBJC_MSGSEND = YES
+
+// === Apple LLVM - Warning Policies ===
+
+GCC_WARN_INHIBIT_ALL_WARNINGS = NO
+GCC_WARN_PEDANTIC = NO
+GCC_TREAT_WARNINGS_AS_ERRORS = YES
+
+// === Apple LLVM - Warnings - All Languages ===
+
+GCC_WARN_CHECK_SWITCH_STATEMENTS = YES
+GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES
+CLANG_WARN_DOCUMENTATION_COMMENTS = NO
+CLANG_WARN_EMPTY_BODY = YES
+GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO
+GCC_WARN_SHADOW = YES
+CLANG_WARN_BOOL_CONVERSION = YES
+CLANG_WARN_CONSTANT_CONVERSION = YES
+GCC_WARN_64_TO_32_BIT_CONVERSION = YES
+CLANG_WARN_ENUM_CONVERSION = YES
+CLANG_WARN_INT_CONVERSION = YES
+CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES
+GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES
+GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR
+GCC_WARN_MISSING_PARENTHESES = YES
+GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES
+GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES
+GCC_WARN_ABOUT_MISSING_NEWLINE = YES
+CLANG_WARN_ASSIGN_ENUM = NO         // This effectively disables using NS_OPTION()
+GCC_WARN_ABOUT_POINTER_SIGNEDNESS = YES
+GCC_WARN_SIGN_COMPARE = YES
+CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES
+GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES
+GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES
+GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES
+GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE
+GCC_WARN_UNKNOWN_PRAGMAS = YES
+CLANG_WARN_UNREACHABLE_CODE = YES
+GCC_WARN_UNUSED_FUNCTION = YES
+GCC_WARN_UNUSED_LABEL = YES
+GCC_WARN_UNUSED_PARAMETER = NO      // Very common to have ignored params in ObjC
+GCC_WARN_UNUSED_VALUE = YES
+GCC_WARN_UNUSED_VARIABLE = YES
+
+// === Apple LLVM - Warnings - C++ ===
+
+CLANG_WARN__EXIT_TIME_DESTRUCTORS = NO
+GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES
+GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES
+GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES
+CLANG_WARN_CXX0X_EXTENSIONS = NO
+
+// === Apple LLVM - Warnings - Objective C ===
+
+CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR
+CLANG_WARN__DUPLICATE_METHOD_MATCH = YES
+CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = NO		// Not useful.
+CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = NO   	// This is to support legacy projects that don't use auto-synthesis
+GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = YES
+GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = YES
+CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES
+GCC_WARN_STRICT_SELECTOR_MATCH = NO					// Not useful and too tough to use with AppKit.
+GCC_WARN_UNDECLARED_SELECTOR = YES
+CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR
+
+// === Apple LLVM - Warnings - Objective C and ARC ===
+
+CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES
+CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES
+CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES
+CLANG_WARN_OBJC_RECEIVER_WEAK = YES
+CLANG_WARN__ARC_BRIDGE_CAST_NONARC = YES
+
+// === Interface Builder XIB Compiler - Options ===
+
+IBC_FLATTEN_NIBS = YES
+IBC_ERRORS = YES
+IBC_NOTICES = YES
+IBC_WARNINGS = YES
+
+// === OSACompiler - Build Options ===
+// === Static Analyzer - Analysis Policy ===
+// === Static Analyzer - Generic Issues ===
+
+CLANG_ANALYZER_DEADCODE_DEADSTORES = YES
+CLANG_ANALYZER_MEMORY_MANAGEMENT = YES
+CLANG_ANALYZER_GCD = YES
+
+// === Static Analyzer - Issues - Objective C ===
+
+CLANG_ANALYZER_OBJC_ATSYNC = YES
+CLANG_ANALYZER_OBJC_NSCFERROR = YES
+CLANG_ANALYZER_OBJC_INCOMP_METHOD_TYPES = YES
+CLANG_ANALYZER_OBJC_COLLECTIONS = YES
+CLANG_ANALYZER_OBJC_UNUSED_IVARS = YES
+CLANG_ANALYZER_OBJC_SELF_INIT = YES
+CLANG_ANALYZER_OBJC_RETAIN_COUNT = YES
+
+// === Static Analyzer - Issues - Security ===
+
+CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES
+CLANG_ANALYZER_SECURITY_KEYCHAIN_API = YES
+CLANG_ANALYZER_SECURITY_INSECUREAPI_UNCHECKEDRETURN = YES
+CLANG_ANALYZER_SECURITY_INSECUREAPI_GETPW_GETS = YES
+CLANG_ANALYZER_SECURITY_INSECUREAPI_MKSTEMP = YES
+CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES
+CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES
+CLANG_ANALYZER_SECURITY_INSECUREAPI_VFORK = YES
+
+// === User Defined ===

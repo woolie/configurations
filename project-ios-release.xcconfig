@@ -1,0 +1,54 @@
+// Xcode settings for all Woolsoft OSX Release configurations
+
+// Start with global project settings
+
+#include "global-osx.xcconfig"
+
+// Then add changes on top:
+
+// === Architectures ===
+
+ONLY_ACTIVE_ARCH = NO
+
+// === Build Locations ===
+// === Build Options ===
+
+DEBUG_INFORMATION_FORMAT = dwarf
+VALIDATE_PRODUCT = YES
+
+// === Code Signing ===
+// === Deployment ===
+// === Kernel Modules ===
+// === Linking ===
+// === Packaging ===
+// === Search Paths ===
+// === Testing ===
+// === Versioning ===
+// === Apple LLVM - Code Generation ===
+
+GCC_OPTIMIZATION_LEVEL = s
+GCC_SYMBOLS_PRIVATE_EXTERN = NO
+
+// === Apple LLVM - Custom Compiler Flags ===
+// === Apple LLVM - Language ===
+// === Apple LLVM - Language - C++ ===
+// === Apple LLVM - Language - Modules ===
+// === Apple LLVM - Language - Objective C ===
+// === Apple LLVM - Preprocessor ===
+
+ENABLE_NS_ASSERTIONS = NO
+GCC_PREPROCESSOR_DEFINITIONS = NS_BLOCK_ASSERTIONS=1 NDEBUG
+
+// === Apple LLVM - Warning Policies ===
+// === Apple LLVM - Warnings - All Languages ===
+// === Apple LLVM - Warnings - C++ ===
+// === Apple LLVM - Warnings - Objective C ===
+// === Apple LLVM - Warnings - Objective C and ARC ===
+// === Asset Catalog Compiler - Options ===
+// === Interface Builder XIB Compiler - Options ===
+// === OSACompiler - Build Options ===
+// === Static Analyzer - Analysis Policy ===
+// === Static Analyzer - Generic Issues ===
+// === Static Analyzer - Issues - Objective C ===
+// === Static Analyzer - Issues - Security ===
+// === User Defined ===
