@@ -7,6 +7,7 @@
 ARCHS = x86_64
 SDKROOT = macosx
 
+// === Assets ===
 // === Build Locations ===
 // === Build Options ===
 
@@ -24,9 +25,10 @@ MACOSX_DEPLOYMENT_TARGET = 10.10
 
 COPY_PHASE_STRIP = NO
 
+// === Headers ===
 // === Kernel Modules ===
 // === Linking ===
-
+// === Packaging ===
 // === Search Paths ===
 
 // "For backwards compatibility reasons, this setting is enabled by default, but disabling it is strongly recommended."
@@ -35,7 +37,7 @@ ALWAYS_SEARCH_USER_PATHS = NO
 
 // === Testing ===
 // === Versioning ===
-// === Apple LLVM - Code Generation ===
+// === Apple LLVM 7.1- Code Generation ===
 
 GCC_DYNAMIC_NO_PIC = NO
 GCC_NO_COMMON_BLOCKS = YES
@@ -52,39 +54,39 @@ GCC_NO_COMMON_BLOCKS = YES
 
 GCC_SYMBOLS_PRIVATE_EXTERN = YES
 
-// === Apple LLVM - Custom Compiler Flags ===
-// === Apple LLVM - Language ===
+// === Apple LLVM 7.1- Custom Compiler Flags ===
+// === Apple LLVM 7.1- Language ===
 
 GCC_C_LANGUAGE_STANDARD = gnu99
 
-// === Apple LLVM - Language - C++ ===
+// === Apple LLVM 7.1- Language - C++ ===
 
 CLANG_CXX_LANGUAGE_STANDARD = c++14
 
-// === Apple LLVM - Language - Modules ===
+// === Apple LLVM 7.1- Language - Modules ===
 
 CLANG_ENABLE_MODULES = YES
 CLANG_MODULES_AUTOLINK = YES
 
-// === Apple LLVM - Language - Objective C ===
+// === Apple LLVM 7.1- Language - Objective C ===
 
 GCC_ENABLE_OBJC_EXCEPTIONS = YES
 
-// === Apple LLVM - Language - Objective C ===
+// === Apple LLVM 7.1- Language - Objective C ===
 
 CLANG_ENABLE_OBJC_ARC = YES
 
-// === Apple LLVM - Preprocessor ===
+// === Apple LLVM 7.1- Preprocessor ===
 
 ENABLE_STRICT_OBJC_MSGSEND = YES
 
-// === Apple LLVM - Warning Policies ===
+// === Apple LLVM 7.1- Warning Policies ===
 
 GCC_WARN_INHIBIT_ALL_WARNINGS = NO
 GCC_WARN_PEDANTIC = NO
 GCC_TREAT_WARNINGS_AS_ERRORS = YES
 
-// === Apple LLVM - Warnings - All Languages ===
+// === Apple LLVM 7.1- Warnings - All Languages ===
 
 GCC_WARN_CHECK_SWITCH_STATEMENTS = YES
 GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES
@@ -120,7 +122,7 @@ GCC_WARN_UNUSED_PARAMETER = NO      // Very common to have ignored params in Obj
 GCC_WARN_UNUSED_VALUE = YES
 GCC_WARN_UNUSED_VARIABLE = YES
 
-// === Apple LLVM - Warnings - C++ ===
+// === Apple LLVM 7.1- Warnings - C++ ===
 
 CLANG_WARN__EXIT_TIME_DESTRUCTORS = NO
 GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES
@@ -128,7 +130,7 @@ GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES
 GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES
 CLANG_WARN_CXX0X_EXTENSIONS = NO
 
-// === Apple LLVM - Warnings - Objective C ===
+// === Apple LLVM 7.1- Warnings - Objective C ===
 
 CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR
 CLANG_WARN__DUPLICATE_METHOD_MATCH = YES
@@ -141,7 +143,7 @@ GCC_WARN_STRICT_SELECTOR_MATCH = NO					// Not useful and too tough to use with 
 GCC_WARN_UNDECLARED_SELECTOR = YES
 CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR
 
-// === Apple LLVM - Warnings - Objective C and ARC ===
+// === Apple LLVM 7.1- Warnings - Objective C and ARC ===
 
 CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES
 CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES
@@ -149,6 +151,7 @@ CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES
 CLANG_WARN_OBJC_RECEIVER_WEAK = YES
 CLANG_WARN__ARC_BRIDGE_CAST_NONARC = YES
 
+// === Asset Catalog Compiler - Options ===
 // === Interface Builder XIB Compiler - Options ===
 
 IBC_FLATTEN_NIBS = YES
@@ -184,5 +187,9 @@ CLANG_ANALYZER_SECURITY_INSECUREAPI_MKSTEMP = YES
 CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES
 CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES
 CLANG_ANALYZER_SECURITY_INSECUREAPI_VFORK = YES
+
+// === Swift Compiler - Code Generation ===
+// === Swift Compiler - Custom Flags ===
+// === Swift Compiler - Search Paths ===
 
 // === User Defined ===
