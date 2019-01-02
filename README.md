@@ -1,9 +1,9 @@
 # `configurations`
 
-[![Platform](https://img.shields.io/badge/platform-osx-blue.svg?style-plastic)]()
+[![Platform](https://img.shields.io/badge/platform-osx-blue.svg?style-plastic)]() [![Platform](https://img.shields.io/badge/platform-ios-blue.svg?style-plastic)]() [![License](https://img.shields.io/badge/license-mit-green.svg?style-plastic)]()
 
 `configurations` is a repository for storing Xcode configuration files. There is a template that holds all
-sections (as comments) as well as each setting (as of Xcode 6.3.2).
+sections (as comments) as well as each setting (as of Xcode 10.1).
 
 - `template.xcconfig` holds all of the potential settings divided into sections as defined by Xcode.
 - `global-osx.xcconfig` is the master configuration file. #include this in your more specific configuration files.
@@ -14,7 +14,7 @@ sections (as comments) as well as each setting (as of Xcode 6.3.2).
 Setting up to use configuration files is easy. Select your project in the Project View, then select the `Info` panel.
 It will look something like this:
 
-![config file setup](https://github.com/woolie/configurations/blob/master/assets/config-files.png)
+![config file setup](assets/config-files.png)
 
 ## Licence
 `configurations` is licensed under The MIT License (MIT), as detailed below:
