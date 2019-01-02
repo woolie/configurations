@@ -1,6 +1,6 @@
 # `configurations`
 
-[![Platform](https://img.shields.io/badge/platform-osx-lightgrey.svg?style-plastic)]()
+[![Platform](https://img.shields.io/badge/platform-osx-blue.svg?style-plastic)]()
 
 `configurations` is a repository for storing Xcode configuration files. There is a template that holds all
 sections (as comments) as well as each setting (as of Xcode 6.3.2).

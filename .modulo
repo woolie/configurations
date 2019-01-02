@@ -1,0 +1,11 @@
+{
+  "options" : {
+    "depdencyInstallationPath" : "modules",
+    "alwaysVerbose" : false
+  },
+  "module" : true,
+  "name" : "configurations",
+  "dependencies" : [
+
+  ]
+}
